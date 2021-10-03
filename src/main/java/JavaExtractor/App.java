@@ -37,7 +37,7 @@ public class App {
 	}
 
 	public static void test(){
-		System.out.println("Conencted woo");
+		System.out.println("Connected to JavaExtractor...");
 	}
 
 	private static void extractDir() {
