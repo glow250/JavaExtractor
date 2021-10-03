@@ -66,7 +66,11 @@ public class ExtractFeaturesTask implements Callable<Void> {
 			return;
 		}
 		for( ProgramFeatures pf : features){
-			System.out.println(pf.getName() +","+ pf.getFeatures().size()+","+this.filePath.toAbsolutePath().toString().split("raw_java")[1]);
+			try{
+				System.out.println(pf.getName() +","+ pf.getFeatures().size()+","+this.filePath.toAbsolutePath().toString().split("raw_java")[1]);
+			}catch(Exception e){
+				System.out.println(pf.getName() +","+ pf.getFeatures().size()+","+this.filePath.toAbsolutePath());
+			}
 		}
 
 // 		String toPrint = featuresToString(features);
