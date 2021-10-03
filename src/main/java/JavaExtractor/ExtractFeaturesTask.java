@@ -65,14 +65,14 @@ public class ExtractFeaturesTask implements Callable<Void> {
 		if (features == null) {
 			return;
 		}
-//		for( ProgramFeatures pf : features){
-//			System.out.println(pf.getName() +","+ pf.getFeatures().size()+","+this.filePath.toAbsolutePath().toString().split("raw_java")[1]);
-//		}
-
-		String toPrint = featuresToString(features);
-		if (toPrint.length() > 0) {
-            System.out.println(toPrint);
+		for( ProgramFeatures pf : features){
+			System.out.println(pf.getName() +","+ pf.getFeatures().size()+","+this.filePath.toAbsolutePath().toString().split("raw_java")[1]);
 		}
+
+// 		String toPrint = featuresToString(features);
+// 		if (toPrint.length() > 0) {
+//             		System.out.println(toPrint);
+// 		}
 	}
 
 	public ArrayList<MethodAST>  getMethodsAndAsts() {
